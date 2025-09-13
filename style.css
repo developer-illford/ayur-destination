@@ -1,134 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f5f1eb;
-    /* background like your screenshot */
 }
 
-.navbar {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* left | center | right */
-    align-items: center;
-    padding: 10px 40px;
+.row {
+    width: 100%;
+    margin: 0;
 }
 
-/* Left Section */
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding-top: 0px;
+.header-container {
+    width: 100%;
+    height: max-content;
 }
 
 
-
-.nav-left i {
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.nav-left span {
-    font-size: 18px;
-    color: #333;
-}
-
-/* Center */
-.nav-center {
-    /* font-size: 22px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    color: #333;
-    text-align: center;
-    padding-left: 60px; */
-    justify-self: center;
-
-}
-
-/* Right Section */
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-
-.language {
-    font-size: 14px;
-    color: #333;
-    border-bottom: 1px solid #333;
-    cursor: pointer;
-    padding-right: 30px;
-}
-
-.quote-btn {
-    background-color: #8b6746;
-    color: white;
-    border: none;
-    padding: 8px 35px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.quote-btn:hover {
-    background-color: #6f5236;
-}
-
-.search-icon {
-    padding-left: 50px;
-}
 
 .hero-image {
-    padding: 20px 80px;
-}
-
-.hero-section {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    /* full screen */
-    overflow: hidden;
 }
 
+.hero-image img {
+    width: 100%;
+    display: block;
+}
 
 .hero-content {
     position: absolute;
-    top: 70%;
-    left: 8%;
-    transform: translateY(-50%);
-    color: #fff;
-    max-width: 500px;
-
-
+    top: 30%;
+    left: 30%;
+    color: #ffff;
+    transform: translate(-60%, 50%);
 }
 
-.hero-content h3 {
-    font-size: 35px;
-    margin-bottom: 15px;
+.hero-content h2 {
+    font-size: 40px;
     font-family: "Raleway", sans-serif;
     font-weight: 300;
-    line-height: 45px;
-    white-space: nowrap;
 }
 
 .hero-content p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 20px;
     font-family: "Raleway", sans-serif;
-    line-height: 25px;
     letter-spacing: 0.5px;
-    font-weight: 300;
-
 }
 
-.hero-btn {
-    background: transparent;
-    color: #fff;
+.hero-content button {
     border: 1px solid #987554;
-    padding: 15px 61px;
-    cursor: pointer;
-    margin-top: 30px;
-    font-size: 14px;
+    padding: 10px 50px;
+    background: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+
 }
 
 .ayurveda {
@@ -144,10 +77,11 @@ body {
     font-weight: 400;
     font-size: 31px;
     text-align: center;
+    padding-top: 70px;
 }
 
 .location {
-    font-size: 10px;
+    font-size: 15px;
     padding-top: 10px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -161,15 +95,717 @@ body {
 .resort-description {
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
 }
 
-.featured-images{
+.featured-images {
     padding-top: 20px;
 }
 
-@media(max-width:992px){
-    .img-fluid{
-        width:100%;
+@media(max-width:992px) {
+    .img-fluid {
+        width: 100%;
         height: auto;
     }
+}
+
+.card {
+    background-color: #f9f6f2;
+    border: 1px solid #e0ddd8;
+    border-radius: 20px;
+    /* rounded corners */
+    margin: 10px;
+    /* space between cards */
+    width: 220px;
+    height: 220px;
+    display: flex;
+    /* use flexbox */
+    flex-direction: column;
+    /* stack image + text vertically */
+    align-items: center;
+    /* center horizontally */
+    justify-content: center;
+    /* center vertically */
+    margin: 15px auto;
+    /* spacing + center in column  */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px 20px;
+}
+
+.card img {
+    max-width: 80px;
+    /* control image size */
+    margin-bottom: 15px;
+    /* space between image and text */
+
+}
+
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.deluxe {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+
+.deluxe-description {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.deluxe-container {
+    padding: 40px 80px;
+}
+
+.deluxe-container .row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.deluxe-container .col-md-5 {
+    padding: 0;
+    max-width: 500px;
+    flex: 1 1 45%;
+}
+
+.deluxe-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.property-cottages {
+    font-size: 14px;
+    color: #555;
+    padding-left: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0;
+}
+
+.property-cottages-heading {
+    font-size: 28px;
+    padding-left: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5px;
+}
+
+.property-cottages-location {
+    font-size: 13px;
+    color: #333;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* Hidden Menu */
+.mobile-menu {
+    position: fixed;
+    top: 10;
+    right: -100%;
+    /* hidden */
+    width: 50%;
+    height: 60%;
+    display: flex;
+    /* make side by side */
+    flex-direction: row;
+    /* row, not column */
+    transition: right 0.5s ease-in-out;
+    z-index: 999;
+}
+
+/* Show when active */
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Left side */
+.menu-left {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+}
+
+.menu-left a {
+    color: #8b5e3c;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 14px 0;
+}
+
+.menu-left a:hover {
+    color: #5c3e26;
+}
+
+/* Right side */
+.menu-right {
+    width: 50%;
+    background: #8b6a50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #fff;
+}
+
+.menu-right p {
+    margin-bottom: 18px;
+    font-size: 13px;
+    color: #e5d4c7;
+}
+
+.menu-right a {
+    border: 1px solid #cfc0b3;
+    padding: 10px 14px;
+    margin: 6px 0;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.menu-right a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    /* dim background */
+    /* display: none; hidden by default */
+    /* z-index: 998; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease;
+    z-index: 998;
+}
+
+/* show overlay when menu active */
+.menu-overlay.active {
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.header-container {
+    padding: 20px 0px;
+}
+
+.header-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-hamburger {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.header-cta button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background: #987554;
+    color: white;
+    cursor: pointer;
+
+}
+
+.header-logo {
+    text-align: center;
+    font-size: 40px;
+}
+
+.header-hamburger {
+    font-size: 22px;
+}
+
+@media(max-width:768px) {
+    .nav-center {
+        text-align: left;
+    }
+
+    .header-cta {
+        display: none;
+    }
+}
+
+.destinations-heading {
+    color: #987554;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 31px;
+    text-align: center;
+    padding-right: 30px;
+
+}
+
+.destinations-description {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gallery-background {
+    background-image: url(images/gallery-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery-info {
+
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.gallery-col {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-col img {
+    width: 100%;
+}
+
+.gallery {
+    padding-top: 90px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.offer-tab {
+    width: 100%;
+    padding: 5% 15%;
+}
+
+.cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 150px;
+}
+
+.cta-heading {
+    color: #987554;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cta-content {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.why-choose-us-background {
+    background-image: url(images/why-choose-us.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    width: 100%;
+    padding: 90px 60px;
+
+}
+
+.cta-button {
+    padding: 20px 60px;
+    font-family: "Raleway", sans-serif;
+    color: #DAD9D7;
+    border: 2px solid #FFFFFF;
+    outline: none;
+    background: linear-gradient(135deg, #98755400 0%, #98755400 80%, #9999993d 80%, #9999993d 100%);
+    margin-top: 30px;
+}
+
+.healing-journey {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+
+}
+
+.cta-section p {
+    padding-bottom: 80px;
+}
+
+.footer {
+    background-image: url(images/footer-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.ayurveda-footer {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #585858;
+
+}
+
+.footer-description {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #585858;
+
+}
+
+.sign-up-button {
+    background-color: #987554;
+    padding: 5px 90px;
+    color: #FFFFFF;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-ayurluxur h4 {
+    font-size: 29px;
+    font-family: "Raleway", sans-serif;
+    color: #313131;
+}
+
+.about-ayurluxur p {
+    color: #585858;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.more-info h4 {
+    color: #313131;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.more-info li {
+    color: #585858;
+    font-size: 17px;
+    list-style-type: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-destinations h4 {
+    color: #313131;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-destinations h5 {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-destinations p {
+    color: #585858;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-contact h4 {
+    color: #313131;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-contact p {
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.location {
+    color: #585858;
+}
+
+.footer-contact a {
+    font-size: 15px;
+    color: #585858;
+}
+
+.footer-items {
+    padding-top: 50px;
+    letter-spacing: 0.5px;
+
+}
+
+.footer-contents {
+    padding: 0px 150px;
+}
+
+.footer-cta-col {
+    padding-top: 40px;
+}
+
+.contact-us-button {
+    font-size: 14px;
+    color: #987554;
+    border: 1px solid #987554;
+    padding: 8px 34px;
+    background: none;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 130px;
+}
+
+.follow-us-on {
+    font-size: 17px;
+}
+
+.social-icons {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #987554;
+    margin-bottom: 50px;
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #8B5E3C;
+    color: white;
+    display: inline-flex;
+    /* makes it a flex container */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
+    color: #585858;
+}
+
+
+
+/* Tablet and below (max-width: 992px) */
+@media (max-width: 992px) {
+    .cta-section {
+        padding: 30px 40px;
+        /* reduce side padding */
+    }
+
+    .cta-heading {
+        font-size: 28px;
+        /* smaller heading */
+        text-align: center;
+    }
+
+    .cta-content {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.6;
+        max-width: 90%;
+    }
+
+    .why-choose-us-background {
+        padding: 60px 30px;
+        /* less padding */
+        width: 100%;
+    }
+
+    .healing-journey {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .cta-button {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+    .cta-section {
+        padding: 20px;
+    }
+
+    .cta-heading {
+        font-size: 22px;
+    }
+
+    .cta-content {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .why-choose-us-background {
+        padding: 40px 20px;
+        border-radius: 15px;
+    }
+
+    .healing-journey {
+        font-size: 22px;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 13px;
+    }
+}
+
+/* 💻 Tablet (768px – 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-contents {
+        padding: 0px 40px;
+        /* reduce horizontal padding */
+    }
+
+    .footer .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns instead of 4 */
+        gap: 40px;
+    }
+
+    /* CTA section in footer (first row) */
+    .footer-cta-col {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .sign-up-button {
+        padding: 10px 50px;
+        margin: 20px auto 0 auto;
+        display: block;
+    }
+
+    /* Fix paragraph widths */
+    .footer-description,
+    .about-ayurluxur p,
+    .footer-destinations p,
+    .footer-contact p {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Headings centered for balance */
+    .footer-items h4 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-destinations h5 {
+        text-align: center;
+    }
+
+    /* Social icons centered */
+    .social-icons {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .social-icons a {
+        margin: 0 6px;
+    }
+}
+
+/* 📱 Mobile (<768px) */
+@media (max-width: 767px) {
+    .footer-contents {
+        padding: 20px;
+    }
+
+    .footer .row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-cta-col {
+        padding-top: 15px;
+    }
+
+    .sign-up-button {
+        width: 100%;
+        max-width: 250px;
+        margin: 20px auto;
+        padding: 12px 0;
+    }
+
+    .contact-us-button {
+        margin: 30px auto 0 auto;
+        display: inline-block;
+    }
+
+    .footer-items {
+        padding-top: 30px;
+    }
+
+    .footer-items h4 {
+        margin-bottom: 10px;
+    }
+
+    .footer-items p,
+    .footer-items li {
+        text-align: center;
+    }
+
+    .social-icons {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .social-icons a {
+        margin: 0 6px;
+    }
+}
+
+.hero-about {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.villas-heading {
+    color: #313131;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 31px;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
