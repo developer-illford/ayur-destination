@@ -1008,3 +1008,20 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
+.sreenilayam-content h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    padding-top: 25px;
+}
+
+.sreenilayam-content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-align: center;
+}
