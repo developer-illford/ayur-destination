@@ -80,20 +80,20 @@ body {
     padding-top: 70px;
 }
 
-.location {
+.destination-card-details h6 {
     font-size: 15px;
     padding-top: 10px;
     font-family: 'Times New Roman', Times, serif;
 
 }
 
-.resorts {
+.destination-card-details h3 {
     font-size: 24px;
     font-weight: 200;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.resort-description {
+.destination-card-details p {
     font-size: 17px;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 0.5px;
@@ -807,6 +807,21 @@ body {
     padding-top: 50px;
 }
 
+
+.discover-more {
+    font-size: 15px;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding-bottom: 40%;
+
+}
+
+.discover-more:hover {
+    text-decoration: underline;
+
+}
+
 .villas-heading {
     color: #313131;
     font-family: 'Times New Roman', Times, serif;
@@ -1024,4 +1039,115 @@ body {
     font-size: 30px;
     color: #FFFFFF;
     text-align: center;
+}
+
+.destination-card {
+    height: 100% !important;
+
+}
+
+.destination-card-contents {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ayurveda-retreats {
+    background-color: #987554;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 10px 80px  0px;
+
+}
+
+.ayurveda-retreats p {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    width: 50%;
+}
+
+.ayurveda-retreats img {
+    width: 157px;
+    height: 168px;
+}
+
+.ayurveda-retreats-background {
+    background: url(images/ayurveda-retreats-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+}
+
+.ayurveda-retreats-card-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 100px;
+}
+
+.ayurveda-retreats-card {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 20px 0px #00000061;
+}
+
+.ayurveda-retreats-card h4 {
+    color: #987554;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+
+}
+
+.ayurveda-retreats-card h5 {
+    color: #313131;
+    font-size: 20PX;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ayurveda-retreats-card P {
+    color: #313131;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+@media (max-width: 1200px) {
+    .ayurveda-retreats-card-col {
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ayurveda-retreats-card-col {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ayurveda-retreats-card-col {
+        margin-bottom: 20px;
+    }
+
+    .ayurveda-retreats-background {
+    padding: 10px 10px;
+}
 }
